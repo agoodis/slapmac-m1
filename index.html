@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlapMac M1 — Slap your Mac. Even on M1.</title>
+    <meta name="description" content="The slap app that works on every Apple Silicon Mac — including base M1. Microphone-based hit detection, custom sound packs, and zero sudo required.">
+    <meta property="og:title" content="SlapMac M1 — Slap your Mac. Even on M1.">
+    <meta property="og:description" content="Native macOS app with mic-based hit detection for base M1 Macs. Custom sound packs, dynamic volume, and more.">
+    <meta property="og:image" content="icon.png">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="icon-128.png">
+    <link rel="apple-touch-icon" href="icon-256.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <img src="icon-128.png" alt="SlapMac M1" class="logo-icon">
+                <span class="logo-text">SlapMac M1</span>
+            </div>
+            <nav class="nav">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="#faq">FAQ</a>
+                <a href="#support">Support</a>
+                <a href="#download" class="nav-cta">Download</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-badge">Works on ALL Apple Silicon Macs</div>
+            <h1>Slap your Mac.<br><span class="accent">It screams back.</span></h1>
+            <p class="hero-sub">
+                The only slap app that works on <strong>base M1</strong> MacBooks.
+                No accelerometer? No problem — we use your microphone.
+            </p>
+            <div class="hero-cta">
+                <a href="https://github.com/agoodis/slapmac-m1/releases/download/v1.0/SlapMac-M1.dmg" class="btn btn-primary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download for macOS
+                </a>
+                <span class="hero-meta">Free &middot; macOS 13+ &middot; Apple Silicon</span>
+            </div>
+            <div class="hero-icon">
+                <img src="icon.png" alt="SlapMac M1 App Icon">
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem / Solution -->
+    <section class="section section-alt" id="problem">
+        <div class="container">
+            <div class="comparison">
+                <div class="comparison-card problem">
+                    <div class="comparison-label">The problem</div>
+                    <h3>Base M1 Macs have no accessible accelerometer</h3>
+                    <p>Classic slap apps rely on the IMU sensor — but it's not available on base M1 MacBooks. So if you have a MacBook Air M1 or base MacBook Pro M1... you're out of luck.</p>
+                </div>
+                <div class="comparison-card solution">
+                    <div class="comparison-label">Our solution</div>
+                    <h3>We detect slaps through your microphone</h3>
+                    <p>A native Swift audio engine with high-pass filtering, adaptive noise floor, and impulse analysis. It distinguishes a slap from a clap, voice, or background noise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+        <div class="container">
+            <h2 class="section-title">More than just a slap app</h2>
+            <p class="section-sub">Built from scratch as a native macOS app. Not a CLI tool. Not a Python script.</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                    </div>
+                    <h3>Mic-based detection</h3>
+                    <p>High-pass filter, peak/RMS analysis, crest-factor algorithm. Detects physical impact, ignores voice and noise.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                    </div>
+                    <h3>Auto backend switching</h3>
+                    <p>Detects your hardware automatically. Uses IMU on M2+/M1 Pro, mic on base M1. Or pick manually.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                    </div>
+                    <h3>Custom sound packs</h3>
+                    <p>Create your own packs with any sounds. Built-in and custom, normal and escalating modes. Open pack folders in Finder.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+                    </div>
+                    <h3>Dynamic volume</h3>
+                    <p>Hit harder — it gets louder. Volume scales with the force of your slap for a realistic response.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                    <h3>Fine-tuned controls</h3>
+                    <p>Sensitivity, cooldown, input gain, mic selection. Tune it for your specific MacBook and environment.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                    </div>
+                    <h3>Native macOS app</h3>
+                    <p>Real SwiftUI interface. No terminal, no Python, no sudo. Just open and slap. Advanced settings and hardware diagnostics included.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section-alt" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How it works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Download & open</h3>
+                    <p>Mount the DMG, drag to Applications. No installer, no terminal commands.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>Grant mic access</h3>
+                    <p>On first launch, allow microphone access. That's the only permission needed on M1.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Slap your Mac</h3>
+                    <p>Hit the lid, palm rest, or side. The app detects the impact and plays your chosen sound.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="section" id="compare">
+        <div class="container">
+            <h2 class="section-title">SlapMac M1 vs. the competition</h2>
+            <div class="table-wrap">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="highlight">SlapMac M1</th>
+                            <th>Other slap apps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Base M1 support</td>
+                            <td class="highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10005;</span></td>
+                        </tr>
+                        <tr>
+                            <td>IMU detection (M2+)</td>
+                            <td class="highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mic-based detection</td>
+                            <td class="highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10005;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Custom sound packs</td>
+                            <td class="highlight"><span class="check">&#10003;</span></td>
+                            <td>Limited</td>
+                        </tr>
+                        <tr>
+                            <td>Dynamic volume</td>
+                            <td class="highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>No sudo required</td>
+                            <td class="highlight"><span class="check">&#10003;</span></td>
+                            <td>Varies</td>
+                        </tr>
+                        <tr>
+                            <td>Native macOS UI</td>
+                            <td class="highlight"><span class="check">&#10003;</span></td>
+                            <td>CLI / Basic</td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td class="highlight"><strong>Free</strong></td>
+                            <td>$3.99</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+        <div class="container">
+            <h2 class="section-title">FAQ</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Will this damage my MacBook?</summary>
+                    <p>No more than any other slap app. The app only listens — it doesn't affect your hardware. But don't go full WWE on your laptop, obviously.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Which Macs are supported?</summary>
+                    <p>Any Apple Silicon Mac (M1, M1 Pro, M1 Max, M1 Ultra, M2, M2 Pro, M3, M4, etc.). Base M1 uses microphone detection, others can use either mic or IMU.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Does the mic mode pick up voices or music?</summary>
+                    <p>The detection algorithm uses high-pass filtering, adaptive noise floor, and crest-factor analysis specifically designed to distinguish physical impacts from voice, music, and ambient noise. You can also tune sensitivity and gain.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is it really free?</summary>
+                    <p>Yes. No trials, no subscriptions, no in-app purchases. Just download and slap.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I add my own sounds?</summary>
+                    <p>Absolutely. Create custom sound packs, add any audio files, set them as normal or escalating. Manage everything from the app or open the pack folder directly in Finder.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Does it need internet access?</summary>
+                    <p>No. Everything runs locally. No data is sent anywhere.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download -->
+    <section class="section section-download" id="download">
+        <div class="container download-inner">
+            <img src="icon-256.png" alt="SlapMac M1" class="download-icon">
+            <h2>Ready to slap?</h2>
+            <p>Download SlapMac M1. It's free. It works on your M1.</p>
+            <a href="https://github.com/agoodis/slapmac-m1/releases/download/v1.0/SlapMac-M1.dmg" class="btn btn-primary btn-lg" id="download-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download .dmg
+            </a>
+            <span class="download-meta">v1.0 &middot; macOS 13+ &middot; Apple Silicon &middot; ~3.5 MB</span>
+        </div>
+    </section>
+
+    <!-- Support the Author -->
+    <section class="section" id="support">
+        <div class="container">
+            <a href="https://boosty.to/agoodis" target="_blank" rel="noopener noreferrer" class="support-card" aria-label="Support the Author on boosty.to/agoodis">
+                <div class="support-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="white"/></svg>
+                </div>
+                <div class="support-text">
+                    <span class="support-title">Support the Author</span>
+                    <span class="support-sub">boosty.to/agoodis</span>
+                </div>
+                <svg class="support-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>&copy; 2025 SlapMac M1</span>
+            <span class="footer-sep">&middot;</span>
+            <span>Made with a slap in mind</span>
+        </div>
+    </footer>
+</body>
+</html>
