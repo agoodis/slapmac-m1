@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://slapmac-m1.agoodis.workers.dev/sitemap.xml
+Sitemap: https://slapmac-m1.netlify.app/sitemap.xml
